@@ -6,7 +6,7 @@ const Video = ({
     snippet: { title, channelTitle, description },
   },
 }) => {
-  if (!videoId) return <p>No Results...</p>;
+  if (!videoId) return <p className="noResult">No Results...</p>;
   const videoSrc = `https://www.youtube.com/embed/${videoId}`;
   return (
     <div>
