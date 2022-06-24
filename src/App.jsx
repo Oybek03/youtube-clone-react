@@ -4,26 +4,34 @@ import URL from "./cloneMain/api/URL";
 import "./Design.css";
 const App = () => {
   const [videos, setVideos] = useState([]);
-  const [selectedVideos, setSelectedVideos] = useState([]);
+  const [selectedVideos, setSelectedVideos] = useState({ id: {}, snippet: {} });
   async function videoSubmit(searchTerm) {
     const {
       data: { items: videos },
     } = await URL.get("search", {
       params: {
         part: "snippet",
-        maxResults: 15,
+        maxResults: 3,
         key: "AIzaSyAcSOpb4zx9jMb4Z5Tsd8ZCO9lw9pFMiYc",
         q: searchTerm,
       },
     });
-    console.log(videos);
     setVideos(videos);
     setSelectedVideos(videos[0]);
+    console.log(videos);
   }
   return (
     <>
       <div className="searchSec">
         <Search onSubmit={videoSubmit} />
+      </div>
+      <div className="videoMain">
+        <div className="videoSec">
+
+        </div>
+        <div className="videoLists">
+          
+        </div>
       </div>
     </>
   );

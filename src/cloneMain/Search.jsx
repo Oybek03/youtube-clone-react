@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 
-const Search = ({ searchTerm }) => {
+const Search = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
   const handleChange = (event) => setSearchTerm(event.target.value);
 
   const keyPress = (event) => {
     if (event.key === "Enter") {
-      onSubmit(searchTerm)
-        
-      };
+      props.onSubmit(props.searchTerm);
     }
   };
-
   return (
-    <>
+    <div>
       <div className="header">
         <a href="/" className="brand">
           <img
@@ -24,14 +21,13 @@ const Search = ({ searchTerm }) => {
         </a>
         <input
           type="text"
-          fullWidth
           placeholder="Search.."
-          value={searchTerm}
+          value={props.searchTerm}
           onChange={handleChange}
           onKeyPress={keyPress}
         />
       </div>
-    </>
+    </div>
   );
 };
 
