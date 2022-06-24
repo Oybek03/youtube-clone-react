@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Search from "./cloneMain/Search";
-
+import URL from "./cloneMain/api/URL";
 import "./Design.css";
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideos, setSelectedVideos] = useState([]);
   async function videoSubmit(searchTerm) {
     const {
-      data: { items: video },
+      data: { items: videos },
     } = await URL.get("search", {
       params: {
         part: "snippet",
