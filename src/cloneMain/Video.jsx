@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
+const Video = ({
+  video: {
+    id: { videoId },
+    snippet: { title, channelTitle, description },
+  },
+}) => {
 
-const Video = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  
+  return <div></div>;
 };
 
 export default Video;

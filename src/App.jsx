@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Search from "./cloneMain/Search";
 import URL from "./cloneMain/api/URL";
 import "./Design.css";
+import Video from "./cloneMain/Video";
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideos, setSelectedVideos] = useState({ id: {}, snippet: {} });
@@ -27,11 +28,9 @@ const App = () => {
       </div>
       <div className="videoMain">
         <div className="videoSec">
-
+          <Video video={selectedVideos} />  
         </div>
-        <div className="videoLists">
-          
-        </div>
+        <div className="videoLists"></div>
       </div>
     </>
   );
