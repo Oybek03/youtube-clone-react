@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@0,100;1,200&family=Roboto:ital,wght@0,300;0,900;1,100&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
 body {
   background-color: #191919;
   overflow-x: hidden;
+  color: #fff;
 }
 .noResult {
   color: #fff;
@@ -27,4 +32,27 @@ body {
 
 .videoItems {
   cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+.videoSec {
+  width: 900px;
+}
+
+@media only screen and (max-width: 600px) {
+  .videoSec {
+    width: 40%;
+  }
+  .videoItems {
+    width: 250px;
+    /* margin-top: 500px; */
+  }
+  .lists {
+    margin-top: 900px;
+    position: relative;
+    right: 120px;
+  }
+  .big-video {
+    width: 90px;
+  }
 }

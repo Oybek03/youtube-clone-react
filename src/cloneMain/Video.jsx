@@ -9,7 +9,7 @@ const Video = ({
   if (!videoId) return <p className="noResult">No Results...</p>;
   const videoSrc = `https://www.youtube.com/embed/${videoId}`;
   return (
-    <div>
+    <div className="big-video">
       <div className="videoIframe">
         {/* <iframe
           frameBorder="0"
@@ -18,11 +18,13 @@ const Video = ({
           src={videoSrc}
         /> */}
         <iframe
-   
+          width="850px"
+          height="500px"
           src={videoSrc}
           title="video"
           frameborder="0"
-          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          autoplay
           allowfullscreen
         ></iframe>
       </div>

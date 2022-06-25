@@ -13,7 +13,7 @@ const App = () => {
     } = await URL.get("search", {
       params: {
         part: "snippet",
-        maxResults: 3,
+        maxResults: 300,
         key: "AIzaSyAcSOpb4zx9jMb4Z5Tsd8ZCO9lw9pFMiYc",
         q: searchTerm,
       },

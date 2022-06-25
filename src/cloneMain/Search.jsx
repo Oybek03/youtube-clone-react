@@ -19,6 +19,7 @@ const Search = (props) => {
             className="logoBrand"
           />
         </a>
+        <h1>Youtube</h1>
         <input
           type="text"
           placeholder="Search.."
