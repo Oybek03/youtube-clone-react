@@ -11,12 +11,20 @@ const Video = ({
   return (
     <div>
       <div className="videoIframe">
-        <iframe
+        {/* <iframe
           frameBorder="0"
           allowFullScreen
           title="Video Player"
           src={videoSrc}
-        />
+        /> */}
+        <iframe
+   
+          src={videoSrc}
+          title="video"
+          frameborder="0"
+          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div className="videoInfo">
         <h1 className="titleVideo">{title}</h1>

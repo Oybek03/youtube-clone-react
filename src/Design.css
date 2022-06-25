@@ -1,9 +1,30 @@
-body{
+body {
   background-color: #191919;
   overflow-x: hidden;
 }
-.noResult{
+.noResult {
   color: #fff;
   font-family: monospace;
   font-size: 20px;
+}
+.videoMain {
+  display: flex;
+  justify-content: space-around;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header input {
+  width: 750px;
+  height: 30px;
+  outline: none;
+}
+.header img {
+  width: 60px;
+}
+
+.videoItems {
+  cursor: pointer;
 }

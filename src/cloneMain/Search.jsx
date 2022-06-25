@@ -6,7 +6,7 @@ const Search = (props) => {
 
   const keyPress = (event) => {
     if (event.key === "Enter") {
-      props.onSubmit(props.searchTerm);
+      props.onSubmit(searchTerm);
     }
   };
   return (
