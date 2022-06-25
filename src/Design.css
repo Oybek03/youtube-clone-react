@@ -53,6 +53,13 @@ body {
     right: 120px;
   }
   .big-video {
-    width: 90px;
+    width: 100%;
+  }
+
+  .videoInfo {
+    width: 100%;
+  }
+  .videoIframe {
+    width: 900px;
   }
 }
